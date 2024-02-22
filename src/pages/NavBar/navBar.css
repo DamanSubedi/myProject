@@ -43,6 +43,7 @@
 
 .links li{
     margin: 1rem 0;
+    cursor: pointer;
 }
 
 .social-links{
@@ -50,6 +51,7 @@
     font-size: 2rem;
     margin: 1rem auto;
     justify-content: center;
+    cursor: pointer;
 }
 
 .links_container{
@@ -62,7 +64,7 @@
     margin: 0 1rem;
     
 }
-d
+
 .social-links li:hover a,
 .links li:hover a{
     color: orangered;

@@ -9,6 +9,7 @@ import Contact from "./contact/Contact";
 import Error from "./error/Error";
 import Loader from "./loader/Loader";
 import Footer from "./footer/Footer";
+import Portfolio from "./portfolio/Portfolio";
 
 
 export default function BrowserRouterSetup() {
@@ -22,6 +23,7 @@ export default function BrowserRouterSetup() {
 
                 <Route exact path="/" element={<Home />} />
                 <Route path="/contact/Contact" element={<Contact />} />
+                <Route exact path="/portfolio/Portfolio" element={<Portfolio />} />
 
 
 

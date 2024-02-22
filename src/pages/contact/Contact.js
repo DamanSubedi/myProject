@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useState } from 'react'
 import Alert from './Alert';
 import './contact.css'
@@ -25,6 +25,7 @@ export default function Contact() {
     const submitHandler = (e) => {
         e.preventDefault();
         if (person.email && person.comment && person.title) {
+            window.location = "mailto:ssssssss6943@gmail.com";
             showAlert(true, `Hello ${person.title} !, your message have been received `, "success")
         }
         else {

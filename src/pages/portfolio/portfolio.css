@@ -1,0 +1,41 @@
+
+
+
+.portfolio{
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    background: aliceblue;
+    box-shadow: var(--shadow--primary);
+    padding: 2rem 1rem;
+    display: grid;
+}
+
+.skill_container, .xp_container{
+    width: 90%;
+    margin: auto;
+}
+
+.title{
+    margin-bottom: 2rem;
+}
+
+.title h1{
+    font-size: 3rem;
+    letter-spacing: .2rem;
+    font-family: var(--font--style);
+}
+
+.skill,.xp{
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    grid-row-gap: 1rem;
+}
+
+
+
+
+
