@@ -49,6 +49,8 @@ input, textarea{
   font-family: var(--font--primary);
   background: transparent;
   border-bottom: 2px solid orangered;
+  text-transform: none;
+  color: black;
 }
 
 *::placeholder{

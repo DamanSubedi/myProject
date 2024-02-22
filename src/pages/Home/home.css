@@ -52,7 +52,12 @@
 }
 
 
-
+@media  screen and (min-width: 820px) {
+    .banner aside{
+        left: 20%;
+        width: 30%;
+    }
+}
 
 @media screen and (max-width: 755px) {
     html{
