@@ -49,3 +49,9 @@
         /* outline: 4px solid orangered; */
     }
 }
+
+@media screen and (max-width: 600px){
+    .loader{
+        display: none;
+    }
+}
