@@ -22,7 +22,7 @@ export default function Loader() {
         window.addEventListener("load", () => setIsLoading(false))
         // setIsLoading(false)
         return () => {
-            window.removeEventListener("load", () => setIsLoading(false))
+            window.removeEventListener("load", () => setIsLoading(true))
         }
 
     }, [])
