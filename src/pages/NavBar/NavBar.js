@@ -49,7 +49,7 @@ export default function NavBar() {
                         {links.map((l) => {
                             const { id, nav, link } = l
                             return (
-                                <li key={id}>
+                                <li key={id} onClick={()=> setShowLink(!showLink)}>
                                     <Link to={link}>{nav}</Link>
                                 </li>
                             )

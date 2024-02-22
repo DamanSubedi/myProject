@@ -8,6 +8,7 @@ import NavBar from "./NavBar/NavBar";
 import Contact from "./contact/Contact";
 import Error from "./error/Error";
 import Loader from "./loader/Loader";
+import Footer from "./footer/Footer";
 
 
 export default function BrowserRouterSetup() {
@@ -26,6 +27,7 @@ export default function BrowserRouterSetup() {
 
                 <Route path="*" element={<Error />} />
             </Routes>
+            <Footer/>
         </Router>
 
     )

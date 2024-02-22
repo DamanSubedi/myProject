@@ -6,7 +6,6 @@ import { SiGmail } from "react-icons/si";
 export const links= [
     {id: 1, nav: "Home", link: '/'},
     {id: 2, nav: "portfolio", link: '/'},
-    {id: 3, nav: "about", link: '/'},
     {id: 4, nav: "contact", link: '/contact/Contact'},
 ]
 export const socialLinks= [
