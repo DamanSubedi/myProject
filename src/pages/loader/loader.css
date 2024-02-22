@@ -51,7 +51,7 @@
 }
 
 @media screen and (max-width: 600px){
-    .loader{
+    .loader_container{
         display: none;
     }
 }
