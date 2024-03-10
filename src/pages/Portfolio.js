@@ -1,8 +1,9 @@
 import { Skills, Experiences } from "./data";
-import "./portfolio.css"
 
 import { FaRegGrinStars } from "react-icons/fa";
 
+//importing css
+import "../index.css"
 
 
 export default function Portfolio() {

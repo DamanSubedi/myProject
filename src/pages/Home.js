@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 //importing css
-import './home.css'
+import '../index.css'
 
 
 
@@ -14,8 +14,15 @@ export default function Home() {
         <main className="banner">
             <aside>
                 <div className="title">
-                    <h2>Hello, I'm <span>Daman</span>.</h2>
-                    <h2>I'm <span>designer</span>.</h2>
+                    <h2>Hello, </h2>
+                    <h2>I'm</h2>
+                        <div className="animate_title">
+                            <span>Daman</span>
+                            <span>designer</span>
+                            <span>developer</span>
+                        </div>
+                    
+
 
                     <div className="info">
                         <p>

@@ -1,7 +1,10 @@
 import React from 'react';
 import { useState } from 'react'
-import Alert from './Alert';
-import './contact.css'
+
+import Alert from "../component/global/Alert"
+
+//importing css
+import '../index.css'
 
 
 

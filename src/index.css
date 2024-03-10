@@ -3,7 +3,7 @@
   --font--links: "Poppins", sans-serif;
   --font--style: "Ubuntu", sans-serif;
 
-
+  --logo-color: orangered;
   --transition--primary: all ease-in-out .4s;
   --shadow--primary: 0 5px 8px rgba(128, 128, 128, 0.5);
 }
@@ -18,7 +18,8 @@
   text-transform: capitalize;
 }
 
-body{
+body {
+  overflow-x: hidden;
   background: rgba(220, 220, 220, 0.4);
 }
 
@@ -39,7 +40,8 @@ ul {
   list-style: none;
 }
 
-input, textarea{
+input,
+textarea {
   resize: none;
   border: none;
   outline: none;
@@ -48,31 +50,27 @@ input, textarea{
   font-weight: lighter;
   font-family: var(--font--primary);
   background: transparent;
-  border-bottom: 2px solid orangered;
+  border-bottom: 2px solid var(--logo-color);
   text-transform: none;
   color: black;
 }
 
-*::placeholder{
+*::placeholder {
   font-size: 1rem;
 }
 
 /* global classes */
 
-.section{
-  height: 100vh;
-  width: 100vw;
-}
 
 .btn {
-  color: orangered;
-  margin: 1rem 0;
+  color: var(--logo-color);
+  margin: 1rem auto;
   width: fit-content;
-  padding: 1rem;
-  border: 2px solid orangered;
+  padding: .5rem 1rem;
+  border: 2px solid var(--logo-color);
   border-radius: .5rem;
   background: white;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition--primary);
@@ -80,28 +78,464 @@ input, textarea{
 
 .btn:hover {
   color: white;
-  background: orangered;
+  background: var(--logo-color);
 }
 
 
-@media screen and (max-width:768px) {
-  html{
-    font-size: 50%;
-  }
-  .btn{
-    font-size: 1rem;
-    padding: .5rem;
-  }
-  
-}
-@media screen and (max-width:360px) {
-  html{
-    font-size: 40%;
-  }
-  .btn{
-    font-size: 1rem;
-    padding: .5rem;
-  }
-  
+
+/* navbar starts here */
+
+.nav {
+  width: 100vw;
+  background: rgba(220, 220, 220, 0.5);
+  box-shadow: var(--shadow--primary);
+  padding: 1rem 1rem;
+  z-index: 1000;
 }
 
+.nav_center {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1rem;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: orangered;
+}
+
+.nav_toggle {
+  font-size: 1.5rem;
+  transition: var(--transition--primary)
+}
+
+.nav_toggle:hover {
+  color: orangered;
+  cursor: pointer;
+}
+
+.links {
+  font-size: 1.2rem;
+  font-family: var(--font--links);
+  font-weight: 500;
+}
+
+.links li {
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.social-links {
+  display: flex;
+  font-size: 1.5rem;
+  margin: 1rem auto;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.links_container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition--primary);
+}
+
+.social-links li {
+  margin: 0 .5rem;
+
+}
+
+.social-links li:hover a,
+.links li:hover a {
+  color: orangered;
+}
+
+@media screen and (min-width:768px) {
+
+  html {
+    font-size: 110%;
+  }
+
+  .nav_toggle {
+    display: none;
+  }
+
+  .nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .links_container {
+    height: auto !important;
+    display: flex;
+  }
+
+  .links {
+    display: flex;
+  }
+
+  .links li {
+    margin-right: 1rem;
+  }
+}
+
+
+/* navbar ends here */
+
+
+
+/* banner starts here */
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 255, 0.8), rgba(0, 0, 0, 1));
+  z-index: 1;
+}
+
+
+.banner {
+  position: relative;
+  inset: 0;
+  background: gainsboro;
+  min-height: calc(100vh - 114px);
+  background: url("./asset/banner.jpg") center/cover no-repeat;
+}
+
+
+.banner aside {
+  position: absolute;
+  z-index: 2;
+  bottom: 10%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.banner aside .title h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  letter-spacing: .1rem;
+}
+
+.banner aside .title h2:nth-of-type(2) {
+  display: inline-block;
+
+}
+
+.banner aside .title .animate_title {
+  height: 2.5rem;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0 1rem;
+  transform: translateY(.65rem);
+}
+
+.banner aside .title .animate_title span {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  font-size: 2rem;
+  font-weight: 700;
+  animation: titleAnimate infinite reverse 5s ease-in-out;
+  color: var(--logo-color);
+
+}
+
+
+
+
+
+.info p {
+  font-size: 1rem;
+  margin: 1.5rem 0;
+  font-weight: 500;
+  color: white;
+  line-height: 1.5rem;
+  letter-spacing: .1rem;
+}
+
+
+
+@keyframes titleAnimate {
+
+  0%,
+  25% {
+    transform: translateY(-5rem);
+  }
+
+  35%,
+  60% {
+    transform: translateY(-2.5rem);
+  }
+
+  65%,
+  90% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(2rem);
+  }
+}
+
+
+@media screen and (min-width: 375px) {
+  .banner aside {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .banner aside {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .banner aside {
+    width: 50%;
+  }
+}
+
+
+/* banner ends here */
+
+
+/* loader starts here */
+
+
+.loader_container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  z-index: 10000;
+  background: white;
+}
+
+.loader {
+  box-sizing: border-box;
+  max-width: fit-content;
+  border-right: 2px solid black;
+  font-size: 3rem;
+  font-weight: 500;
+  overflow: hidden;
+  padding: 0 1rem;
+  animation: 5s steps(50) infinite type,
+    1s steps(30) infinite animate_caret;
+}
+
+.loader span {
+  font-size: 4rem;
+  font-weight: 700;
+  color: orangered;
+}
+
+
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes animate_caret {
+
+  from,
+  to {
+    border-right: transparent;
+  }
+
+  50% {
+    border-right: .5rem solid orangered;
+  }
+}
+
+
+
+/* loader starts here */
+
+/* portfolio starts here */
+
+
+
+
+.portfolio {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  background: aliceblue;
+  box-shadow: var(--shadow--primary);
+  padding: 2rem 1rem;
+  display: grid;
+}
+
+.skill_container,
+.xp_container {
+  width: 90%;
+  margin: auto;
+}
+
+
+.title h1 {
+  font-size: 3rem;
+  letter-spacing: .2rem;
+  font-family: var(--font--style);
+}
+
+.skill,
+.xp {
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  grid-row-gap: 1rem;
+}
+
+
+
+
+
+
+
+/* portfolio ends here */
+
+/* footer starts here */
+.footer {
+  display: grid;
+  place-items: center;
+  background: black;
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: .8rem;
+  padding: 1rem 0;
+
+}
+
+/* footer ends here */
+
+
+/* contact starts here */
+
+.contact {
+  width: 90vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  background: white;
+  box-shadow: var(--shadow--primary);
+  place-items: center;
+  padding: 1rem 4rem;
+  justify-content: center;
+}
+
+.contact_title {
+  width: 40%;
+}
+
+.contact aside h1 {
+  font-size: 4rem;
+  font-family: var(--font--style);
+  margin: 1rem auto;
+}
+
+.contact aside .info p {
+  margin-top: 2rem;
+  font-family: var(--font--secondary);
+  color: black;
+}
+
+
+.contact_form_container {
+  width: 40%;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contact_form>* {
+  color: orangered;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+/* contact ends here */
+
+
+/* alert starts here */
+
+.alert_container {
+  display: grid;
+  place-items: center;
+  border-radius: .3rem;
+  padding: .2rem;
+}
+
+.success {
+  color: green;
+  background: rgba(0, 128, 0, 0.1);
+}
+
+.danger {
+  color: red;
+  background: rgba(255, 0, 0, 0.1);
+}
+
+/* alert ends here */
+
+
+/* error starts here */
+
+.error_container {
+  background: black;
+  height: 89vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+}
+
+.error_container h1 {
+  color: white;
+  font-size: 4rem;
+}
+
+/* error ends here */

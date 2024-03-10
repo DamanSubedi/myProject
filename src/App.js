@@ -1,14 +1,36 @@
-import React from "react";
 
-import BrowserRouterSetup from './pages/index'
+import { Routes, Route } from "react-router-dom"
 
-const App = () => {
+// importing pages
+import Home from "./pages/Home"
+import Contact from "./pages/Contact"
+import Portfolio from "./pages/Portfolio"
+import Error from "./pages/Error"
+import Loader from "./component/global/Loader"
+import NavBar from "./component/global/NavBar"
+import Footer from "./component/global/Footer"
+
+export default function App() {
     return (
-        <BrowserRouterSetup />
+
+        <>
+
+
+            <Loader />
+            <NavBar />
+            <Routes>
+
+                <Route exact path="/" element={<Home />} />
+                <Route path="/contact/Contact" element={<Contact />} />
+                <Route exact path="/portfolio/Portfolio" element={<Portfolio />} />
+
+
+
+                <Route path="*" element={<Error />} />
+            </Routes>
+            <Footer/>
+        </>
+
     )
 }
-
-
-export default App;
-
 

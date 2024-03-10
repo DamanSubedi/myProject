@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import './loader.css'
+import '../../index.css'
 
 
 function Preloader() {
@@ -20,7 +20,7 @@ export default function Loader() {
 
     useEffect(() => {
         window.addEventListener("load", () => setIsLoading(false))
-        // setIsLoading(false)
+        setIsLoading(false)
         return () => {
             window.removeEventListener("load", () => setIsLoading(false))
         }
@@ -32,7 +32,7 @@ export default function Loader() {
 
     return (
         <>
-            {isLoading && <Preloader/>}
+            {isLoading && <Preloader />}
         </>
 
 

@@ -1,4 +1,4 @@
-import "./alert.css"
+import "../../index.css"
 import { useEffect } from "react";
 
 
