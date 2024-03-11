@@ -16,20 +16,20 @@ export default function Home() {
                 <div className="title">
                     <h2>Hello, </h2>
                     <h2>I'm</h2>
-                        <div className="animate_title">
-                            <span>Daman</span>
-                            <span>designer</span>
-                            <span>developer</span>
-                        </div>
-                    
+                    <div className="animate_title">
+                        <span>Daman</span>
+                        <span>designer</span>
+                        <span>developer</span>
+                    </div>
+
 
 
                     <div className="info">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            I am self-taught developer and have been enthusiastically coding Html, Css and React for more than 18 months
                         </p>
                         <p>
-                            Suscipit voluptatibus iusto possimus consectetur cupiditate recusandae.
+                            currently, seeking an opportunity as a react based front end web developer.
                         </p>
                     </div>
                 </div>
