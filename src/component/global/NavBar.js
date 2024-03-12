@@ -23,7 +23,7 @@ export const socialLinks = [
     { id: 1, nav: "faceBook", icon: <FaFacebook />, link: 'https://www.facebook.com' },
     { id: 2, nav: "linkedIn", icon: <FaLinkedin />, link: 'https://www.linkedin.com' },
     { id: 3, nav: "whatsApp", icon: <FaWhatsapp />, link: 'https://web.whatsapp.com/' },
-    { id: 4, nav: "gmail", icon: <SiGmail />, link: 'https://mail.google.com' },
+    { id: 4, nav: "gmail", icon: <SiGmail />, link: "mailto:ssssssss6943@gmail.com"},
 ]
 
 

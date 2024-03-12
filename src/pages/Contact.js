@@ -46,39 +46,42 @@ export default function Contact() {
 
 
     return (
-        <section className="section contact">
-            <aside className='contact_title'>
-                <div className='title'>
-                    <h1>Get in</h1>
-                    <h1>touch</h1>
-                </div>
-                <div className='info'>
-                    <p>Currently seeking remote brand design and art direction opportunities</p>
-                </div>
-            </aside>
-            <article className='contact_form_container'>
+        <section className="contact">
+            <div className='contact_container'>
 
-                <form className='contact_form' onSubmit={(e) => submitHandler(e)}>
-                    <label htmlFor='title'>Name</label>
-                    <input id='title' placeholder="title" name='title'
-                        onChange={(e) => changeHandler(e)}
-                        value={person.title}></input>
+                <aside className='contact_title'>
+                    <div className='title'>
+                        <h1>Get in</h1>
+                        <h1>touch</h1>
+                    </div>
+                    <div className='info'>
+                        <p>currently, seeking an opportunity as a react based front end web developer.</p>
+                    </div>
+                </aside>
+                <article className='contact_form_container'>
 
-                    <label htmlFor='email'>Email</label>
-                    <input id='email' placeholder="Email" name='email'
-                        onChange={(e) => changeHandler(e)}  value={person.email} ></input>
+                    <form className='contact_form' onSubmit={(e) => submitHandler(e)}>
+                        <label htmlFor='title'>Name</label>
+                        <input id='title' name='title'
+                            onChange={(e) => changeHandler(e)}
+                            value={person.title}></input>
 
-                    <label htmlFor='comment'>comment</label>
-                    <textarea id="comment" maxLength={100} rows={1} placeholder="message here" name='comment'
-                        onChange={(e) => changeHandler(e)}  value={person.comment}></textarea>
+                        <label htmlFor='email'>Email</label>
+                        <input id='email' name='email'
+                            onChange={(e) => changeHandler(e)} value={person.email} ></input>
 
-                    <button type='submit' className='btn'>
-                        submit
-                    </button>
-                </form>
-                {alert.show && <Alert person={person} showAlert={showAlert} {...alert} />}
-            </article>
+                        <label htmlFor='comment'>comment</label>
+                        <textarea id="comment" maxLength={100} rows={1}  name='comment'
+                            onChange={(e) => changeHandler(e)} value={person.comment}></textarea>
 
+                        <button type='submit' className='btn'>
+                            submit
+                        </button>
+                    </form>
+                    {alert.show && <Alert person={person} showAlert={showAlert} {...alert} />}
+                </article>
+
+            </div>
         </section>
     )
 }

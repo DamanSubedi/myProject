@@ -42,10 +42,7 @@ ul {
 
 input,
 textarea {
-  resize: none;
-  border: none;
-  outline: none;
-  padding: .5rem;
+  all: unset;
   font-size: .7rem;
   font-weight: lighter;
   font-family: var(--font--primary);
@@ -84,7 +81,7 @@ iframe {
   background: var(--logo-color);
 }
 
-.btn_white{
+.btn_white {
   transition: all .3s linear;
 }
 
@@ -312,18 +309,22 @@ iframe {
 
 @keyframes titleAnimate {
 
-  0%,
-  25% {
+0% {
+    transform: translateY(200%);
+  }
+
+5%,
+35%{
     transform: translateY(10%);
   }
 
-  35%,
-  60% {
+  40%,
+  65% {
     transform: translateY(-135%);
   }
 
-  65%,
-  90% {
+  70%,
+  95% {
     transform: translateY(-275%);
   }
 
@@ -521,40 +522,35 @@ iframe {
 /* contact starts here */
 
 .contact {
-  width: 90vw;
-  max-width: 1000px;
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5rem;
-  background: white;
-  box-shadow: var(--shadow--primary);
+  display: grid;
+  width: 100vw;
+  min-height: calc(100vh - 110px);
   place-items: center;
-  padding: 1rem 4rem;
-  justify-content: center;
 }
 
-.contact_title {
-  width: 40%;
+.contact_container{
+  width: 90vw;
+  max-width: 800px;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-column-gap: 50px;
 }
+
 
 .contact aside h1 {
-  font-size: 4rem;
+  font-size: 2rem;
   font-family: var(--font--style);
   margin: 1rem auto;
 }
 
 .contact aside .info p {
-  margin-top: 2rem;
+  margin: 2rem auto;
   font-family: var(--font--secondary);
   color: black;
 }
 
 
-.contact_form_container {
-  width: 40%;
-}
 
 .contact_form {
   display: flex;
@@ -562,11 +558,11 @@ iframe {
   justify-content: flex-start;
 }
 
+
 .contact_form>* {
-  color: orangered;
-  margin: 1rem 0;
-  font-size: 1.5rem;
-  font-weight: 600;
+  margin: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 
@@ -587,6 +583,8 @@ iframe {
   place-items: center;
   border-radius: .3rem;
   padding: .2rem;
+  font-size: .8rem;
+  text-transform: none;
 }
 
 .success {
