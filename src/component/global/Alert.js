@@ -13,7 +13,7 @@ export default function Alert({type, msg, person, show, showAlert}){
 
     return(
         <div className={`alert_container ${type}`}>
-            <h1>{msg}</h1>
+            <p>{msg}</p>
         </div>
     )
 }

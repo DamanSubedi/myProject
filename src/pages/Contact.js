@@ -28,7 +28,6 @@ export default function Contact() {
     const submitHandler = (e) => {
         e.preventDefault();
         if (person.email && person.comment && person.title) {
-            window.location = "mailto:ssssssss6943@gmail.com";
             showAlert(true, `Hello ${person.title} !, your message have been received `, "success")
         }
         else {

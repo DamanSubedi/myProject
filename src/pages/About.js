@@ -29,7 +29,7 @@ export default function About() {
 
             </article>
             <article className="abouts_container">
-                <Title title="projects" />
+                <Title title="project" />
                 <ul className="projects">
                     {Experiences.map((exp) => {
                         return (

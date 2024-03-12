@@ -583,7 +583,11 @@ iframe {
   place-items: center;
   border-radius: .3rem;
   padding: .2rem;
-  font-size: .8rem;
+
+}
+
+.alert_container p{
+  font-weight: 500;
   text-transform: none;
 }
 
