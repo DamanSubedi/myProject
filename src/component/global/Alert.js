@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export default function Alert({type, msg, person, show, showAlert}){
 
     useEffect(()=>{
-        let alertTimer = setTimeout(showAlert, 2000)
+        let alertTimer = setTimeout(showAlert, 4000)
         return ()=>{
             clearTimeout(alertTimer);
         }

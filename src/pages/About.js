@@ -36,10 +36,22 @@ export default function About() {
                             <>
                                 <li key={exp.index} className="project">
                                     <iframe
-                                        src={exp.url} title={exp.title}></iframe>
-                                    <Link to={exp.url} className="project_title btn_white">
-                                        {exp.title}
-                                    </Link>
+                                        src={exp.url} title={exp.title}>
+
+                                    </iframe>
+                                    <div className="project_title ">
+                                        <Link to={exp.url} className="btn_white">
+                                            {exp.title}
+
+                                        </Link>
+
+                                        source Code :
+                                        <Link to={exp.sourceCode} className="btn_white">
+                                            {exp.sourceCode}
+                                        </Link>
+
+                                    </div>
+
                                 </li>
                             </>
                         )

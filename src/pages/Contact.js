@@ -28,7 +28,7 @@ export default function Contact() {
     const submitHandler = (e) => {
         e.preventDefault();
         if (person.email && person.comment && person.title) {
-            showAlert(true, `Hello ${person.title} !, your message have been received `, "success")
+            showAlert(true, `Hello ${person.title} !, please click on gmail icon to reach me directly!! `, "success")
         }
         else {
             showAlert(true, "please fill the form", "danger")

@@ -6,8 +6,8 @@ export const Experiences = [
     {
         id: 1, 
         title: "ecommerce-project",
-        url : "https://damansubedi-ecommerce-project-react.netlify.app/"
-
+        url : "https://damansubedi-ecommerce-project-react.netlify.app/",
+        sourceCode : "https://github.com/DamanSubedi/ecommerce-project.git"
     },
 ]
 

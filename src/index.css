@@ -487,8 +487,12 @@ iframe {
 .project_title {
   margin-bottom: 2rem;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 50px;
+  text-transform: none;
 }
 
 .tech_logo {
@@ -589,6 +593,7 @@ iframe {
 .alert_container p{
   font-weight: 500;
   text-transform: none;
+  font-size: .7rem;
 }
 
 .success {
